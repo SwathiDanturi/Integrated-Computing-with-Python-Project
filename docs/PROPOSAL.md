@@ -4,8 +4,11 @@
 - T2: Swathi Danturi
 
 #### File: PROPOSAL.md
-#### Authors: Olivia, Swathi
 #### Date: 11/23/2024
+#### Authorship Information
+- Data Source, Pre-processing, Cleaning and Labeling, Questions 3 and 4: `Swathi`
+- Data Documentation, Data Privacy, Questions 1 and 2: `Olivia`
+- Data Contents: `Olivia` and `Swathi`
 
 #### Data Source
 - Name: `NYPD Arrest Data (Year to Date)`
