@@ -10,7 +10,7 @@ Date: 11/29/2024
 from analysis_t1 import Analysis
 
 
-def test_most_arrests_day_most_common_10_t1():
+def test_most_arrests_day_most_common_race_10_t1():
     """Use NYPD_Arrest_Data_10.csv to test most_arrests_day_most_common_race.
     """
     arrest_file = "./data/NYPD_Arrest_Data_10_T1.csv"
@@ -20,7 +20,7 @@ def test_most_arrests_day_most_common_10_t1():
     assert actual == expected
 
 
-def test_most_arrests_day_most_common_50_t1():
+def test_most_arrests_day_most_common_race_50_t1():
     """Use NYPD_Arrest_Data_50.csv to test most_arrests_day_most_common_race.
     """
     arrest_file = "./data/NYPD_Arrest_Data_50_T1.csv"
@@ -30,7 +30,7 @@ def test_most_arrests_day_most_common_50_t1():
     assert actual == expected
 
 
-def test_most_arrests_day_most_common_100_t1():
+def test_most_arrests_day_most_common_race_100_t1():
     """Use NYPD_Arrest_Data_100.csv to test most_arrests_day_most_common_race.
     """
     arrest_file = "./data/NYPD_Arrest_Data_100_T1.csv"
