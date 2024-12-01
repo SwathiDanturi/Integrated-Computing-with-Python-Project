@@ -1,12 +1,12 @@
 """
 Analysis of data from NYC OpenData about NYPD Arrest Data (Year to Date).
 
-File: analysisT2.py
+File: analysis_t1.py
 Initial developers: Olivia LaCroix and Swathi Danturi
 Date: 11/29/2024
 Data source:
 https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data
-Developer: Swathi Danturi
+Developer: Olivia LaCroix
 """
 
 import csv
