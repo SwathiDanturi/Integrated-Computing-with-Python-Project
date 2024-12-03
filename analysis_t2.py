@@ -37,9 +37,7 @@ class Analysis:
         self.arrests = []
         try:
             with open(file_path, mode="r", encoding="utf-8") as csv_file:
-                csv_reader = csv.DictReader(
-                    csv_file, delimiter=",", quotechar='"'
-                )
+                csv_reader = csv.DictReader(csv_file, delimiter=",", quotechar='"')
                 self.arrests = list(csv_reader)
         except IOError as err:
             print(err)
@@ -51,3 +49,30 @@ class Analysis:
         in the text file located at `file_path`.
         """
         return self.arrests
+
+    def crime_most_committed_agegroup(self, crime_type):
+        """
+        For a given crime type, finding the age group of the perpetrator
+        that has committed the most number of crimes and also find the ratio
+        of the crime count between Male and Female
+        Returns a tuple with the following elements:
+        - age group(s) that has committed the most number of crimes
+        - count of crimes committed by the age group(s)
+        - ratio of crime count between `Male` and `Female`
+        """
+        age_group_crime_count = {}
+        gender = {"M": 0, "F": 0}
+        for arrest in self.arrests:
+            if crime_type in arrest["PD_DESC"]:
+                if arrest["AGE_GROUP"] not in age_group_crime_count:
+                    age_group_crime_count[arrest["AGE_GROUP"]] = 0
+                age_group_crime_count[arrest["AGE_GROUP"]] += 1
+                gender[arrest["PERP_SEX"]] += 1
+        highest_crime_count = max(age_group_crime_count.values(), default=0)
+        highest_count_age_groups = [
+            age_group
+            for age_group, count in age_group_crime_count.items()
+            if count == highest_crime_count
+        ]
+        ratio = str(gender["M"]) + ":" + str(gender["F"])
+        return (highest_count_age_groups, highest_crime_count, ratio)

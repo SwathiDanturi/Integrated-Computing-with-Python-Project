@@ -37,9 +37,7 @@ class Analysis:
         self.arrests = []
         try:
             with open(file_path, mode="r", encoding="utf-8") as csv_file:
-                csv_reader = csv.DictReader(
-                    csv_file, delimiter=",", quotechar='"'
-                )
+                csv_reader = csv.DictReader(csv_file, delimiter=",", quotechar='"')
                 self.arrests = list(csv_reader)
         except IOError as err:
             print(err)

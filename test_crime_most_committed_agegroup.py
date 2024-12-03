@@ -17,8 +17,8 @@ def test_crime_most_committed_agegroup_10():
     for the crime type 'Intoxicated & Impaired Driving'
     """
     analysis = Analysis("./data/NYPD_Arrest_Data_10_T2.csv")
-    expected = (['25-44', '18-24'], 2, '3:1')
-    actual = analysis.crime_most_committed_agegroup('DRIVING')
+    expected = (["25-44", "18-24"], 2, "3:1")
+    actual = analysis.crime_most_committed_agegroup("DRIVING")
     assert actual == expected
 
 
@@ -29,8 +29,8 @@ def test_crime_most_committed_agegroup_50():
     for the crime type 'Intoxicated & Impaired Driving'
     """
     analysis = Analysis("./data/NYPD_Arrest_Data_50_T2.csv")
-    expected = (['25-44', '<18', '65+'], 3, '9:4')
-    actual = analysis.crime_most_committed_agegroup('DRIVING')
+    expected = (["25-44", "<18", "65+"], 3, "9:4")
+    actual = analysis.crime_most_committed_agegroup("DRIVING")
     assert actual == expected
 
 
@@ -41,8 +41,8 @@ def test_crime_most_committed_agegroup_100():
     for the crime type 'Intoxicated & Impaired Driving'
     """
     analysis = Analysis("./data/NYPD_Arrest_Data_100_T2.csv")
-    expected = (['65+', '25-44'], 7, '22:3')
-    actual = analysis.crime_most_committed_agegroup('DRIVING')
+    expected = (["65+", "25-44"], 7, "22:3")
+    actual = analysis.crime_most_committed_agegroup("DRIVING")
     assert actual == expected
 
 
