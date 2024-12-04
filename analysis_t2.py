@@ -2,17 +2,16 @@
 Analysis of data from NYC OpenData about NYPD Arrest Data (Year to Date).
 
 File: analysis_t2.py
-Initial developers: Olivia LaCroix and Swathi Danturi
+Initial developers: Swathi Danturi
 Date: 11/29/2024
 Data source:
 https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data
-Developer: Swathi Danturi
 """
 
 import csv
 
 
-class Analysis:
+class AnalysisT2:
     """
     Analyze arrest(s) and related crime data from NYC OpenData,
     about arrests completed by New York Police Department.
@@ -26,29 +25,23 @@ class Analysis:
             keys: strings from the fields in the 1st row of the CSV file
             values: strings with information corresponding to the keys
 
-        :param file_path: str, path of CSV file, relative to `analysis.py`
+        :param file_path: str, path of CSV file, relative to `analysis_t2.py`
             module. The file has a heading 1st row, followed by rows that have
             data about arrests completed by New York Police Department that
             was collected and published by NYC OpenData
             https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data:
                 one respondent per row and one column per answer.
-        :return: Analysis object
+        :return: AnalysisT2 object
         """
         self.arrests = []
         try:
             with open(file_path, mode="r", encoding="utf-8") as csv_file:
-                csv_reader = csv.DictReader(csv_file, delimiter=",", quotechar='"')
+                csv_reader = csv.DictReader(
+                    csv_file, delimiter=",", quotechar='"'
+                )
                 self.arrests = list(csv_reader)
         except IOError as err:
             print(err)
-
-    def __str__(self):
-        """
-        Returns string representation of the list `self.arrests`. The elements
-        of the list are dictionaries. Each dictionary corresponds to a row
-        in the text file located at `file_path`.
-        """
-        return self.arrests
 
     def crime_most_committed_agegroup(self, crime_type):
         """
@@ -75,4 +68,11 @@ class Analysis:
             if count == highest_crime_count
         ]
         ratio = str(gender["M"]) + ":" + str(gender["F"])
+        result_string = f"""
+The age group(s) that has committed the most number of crimes,
+for the crime type '{crime_type}' is/are
+{highest_count_age_groups}, with a count of '{highest_crime_count}'.
+Ratio of crime count between Male and Female is
+'{ratio}'."""
+        print(result_string)
         return (highest_count_age_groups, highest_crime_count, ratio)
