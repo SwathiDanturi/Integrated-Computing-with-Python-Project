@@ -13,8 +13,9 @@ from analysis_t2 import AnalysisT2
 
 def main():
     """
-    Demo the functionality of the methods implemented in Analysis1 and
-    Analysis2 constructor(s). To run this module, in Terminal,
+    Demo the functionality of the methods implemented in AnalysisT1 and
+    AnalysisT2.
+    To run this module, in Terminal,
     select bash and change directory to PROJECT directory.
     Then, either use the arrow in upper-right corner, or,
     in the Terminal, run: python client.py

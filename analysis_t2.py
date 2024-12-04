@@ -31,7 +31,7 @@ class AnalysisT2:
             was collected and published by NYC OpenData
             https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data:
                 one respondent per row and one column per answer.
-        :return: Analysis object
+        :return: AnalysisT2 object
         """
         self.arrests = []
         try:
