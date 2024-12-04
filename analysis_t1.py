@@ -46,7 +46,8 @@ class AnalysisT1:
     def most_arrests_day_most_common_race(self):
         """This method identifies the day with the highest number of arrests.
         The method then identifies which perpetrator by race was arrested the
-        most on that day. The method returns a tuple with the date and the
+        most on that day.
+        The method returns a tuple with the date and the
         race of the perpetrator who were arrested the most on that day.
         """
 

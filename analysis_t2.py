@@ -73,7 +73,6 @@ The age group(s) that has committed the most number of crimes,
 for the crime type '{crime_type}' is/are
 {highest_count_age_groups}, with a count of '{highest_crime_count}'.
 Ratio of crime count between Male and Female is
-'{ratio}'.
-"""
+'{ratio}'."""
         print(result_string)
         return (highest_count_age_groups, highest_crime_count, ratio)
