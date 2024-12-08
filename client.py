@@ -29,6 +29,8 @@ def main():
     analysis2 = AnalysisT2("./data/NYPD_Arrest_Data_50_T2.csv")
     result = analysis2.crime_most_committed_agegroup("DRIVING")
     print(result)
+    result = analysis2.avg_time_diff_between_arrests("V")
+    print(result)
 
 
 main()
