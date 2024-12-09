@@ -24,6 +24,8 @@ def main():
     analysis1 = AnalysisT1("./data/NYPD_Arrest_Data_50_T1.csv")
     result = analysis1.most_arrests_day_most_common_race()
     print(result)
+    result = analysis1.highest_felony_offense_in_borough()
+    print(result)
 
     # Analysis2
     analysis2 = AnalysisT2("./data/NYPD_Arrest_Data_50_T2.csv")
