@@ -36,7 +36,9 @@ class AnalysisT1:
         self.arrests = []
         try:
             with open(file_path, mode="r", encoding="utf-8") as csv_file:
-                csv_reader = csv.DictReader(csv_file, delimiter=",", quotechar='"')
+                csv_reader = csv.DictReader(
+                    csv_file, delimiter=",", quotechar='"'
+                )
                 self.arrests = list(csv_reader)
         except IOError as err:
             print(err)
@@ -46,7 +48,8 @@ class AnalysisT1:
         The method then identifies which perpetrator by race was arrested the
         most on that day.
         The method returns a tuple with the date and the
-        race of the perpetrator who were arrested the most on that day.
+        race of the perpetrator who were arrested the most on that day. The
+        method returns a tuple.
         """
 
         arrests_per_day = {}
@@ -80,3 +83,59 @@ class AnalysisT1:
             f"{most_common_race}"
         )
         return max_arrests_per_day, most_common_race
+
+    def highest_felony_offense_in_borough(self):
+        """Use the accumulation pattern to filter by felony offenses, find the
+        borough with the highest number of felony arrests, and identify the
+        most committed felony offense in that borough. The method returns a
+        tuple."""
+
+        borough_dict = {}
+
+        for arrest in self.arrests:
+            if arrest["LAW_CAT_CD"] == "F":
+                borough = arrest["ARREST_BORO"]
+                offense = arrest["PD_DESC"]
+
+                if borough not in borough_dict:
+                    borough_dict[borough] = {"arrest_count": 0, "offenses": {}}
+
+                borough_dict[borough]["arrest_count"] += 1
+
+                if offense in borough_dict[borough]["offenses"]:
+                    borough_dict[borough]["offenses"][offense] += 1
+                else:
+                    borough_dict[borough]["offenses"][offense] = 1
+
+        most_felony_arrests_borough = None
+        max_arrest_count = 0
+
+        for borough, data in borough_dict.items():
+            if data["arrest_count"] > max_arrest_count:
+                most_felony_arrests_borough = borough
+                max_arrest_count = data["arrest_count"]
+
+        most_committed_offense = None
+        max_offense_count = 0
+
+        for offense, count in borough_dict[most_felony_arrests_borough][
+            "offenses"
+        ].items():
+            if count > max_offense_count:
+                most_committed_offense = offense
+                max_offense_count = count
+
+        print(
+            f"The borough with the highest number of felony arrests was: "
+            f"{most_felony_arrests_borough}."
+        )
+        print(
+            f"The most committed felony offense being "
+            f"{most_committed_offense} with {max_offense_count} occurrence(s)."
+        )
+
+        return (
+            most_felony_arrests_borough,
+            most_committed_offense,
+            max_offense_count
+        )
