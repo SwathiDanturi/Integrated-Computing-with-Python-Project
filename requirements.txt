@@ -4,3 +4,9 @@
 ### Developers: 
 - T1: Olivia LaCroix
 - T2: Swathi Danturi
+
+# Required packages
+pip
+pytest
+rainbow-csv
+csv package
