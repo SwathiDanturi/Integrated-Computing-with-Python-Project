@@ -39,17 +39,17 @@
     - `LAW_CODE` - law code charges corresponding to penal law, and local laws
     - `ARREST_PRECINCT` - precinct where the arrest occurred
     - `JURISDICTION_CODE` - jurisdiction responsible for arrest. Jurisdiction codes 0(Patrol), 1(Transit) and 2(Housing) represent NYPD whilst codes 3 and more represent non NYPD jurisdictions
-    - Attributes removed from the dataset during preprocessing:
+- Attributes removed from the dataset during preprocessing:
 	- `X_COORD_CD` - midblock X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
     - `Y_COORD_CD` - midblock Y-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
     - `Latitude` - latitude coordinate for Global Coordinate System, WGS 1984, decimal degrees (EPSG 4326)
     - `Longitude` - longitude coordinate for Global Coordinate System, WGS 1984, decimal degrees (EPSG 4326)
     - `New Georeferenced Column` - randomly generated geocoded column based on Latitude and Longitude fields
-    - Number of items: 195K
-    - Number of attributes: 19
-    - Timeframe the dataset cover: Jan 2024 - Oct 2024
-   	- Size of the original file: 35.894 MB
-    - Size of the file used in the project: We used smaller sized files that contained 10, 50 and 100 records which varied by team member.
+- Number of items: 195K
+- Number of attributes: 19
+- Timeframe the dataset cover: Jan 2024 - Oct 2024
+- Size of the original file: 35.894 MB
+- Size of the file used in the project: We used smaller sized files that contained 10, 50 and 100 records which varied by team member.
 ##### **Intended use/purpose** of the dataset
 - Explore arrest data from police activity in New York city which helps identify recurring offenses in certain locations by certain demographic perpetrators.
 

@@ -12,7 +12,6 @@ This project analyzes data from NYC OpenData about NYPD Arrest Data (Year to Dat
 - Catalog: [Catalog of the dataset](https://catalog.data.gov/dataset/nypd-arrest-data-year-to-date)
 
 ## Client Overview 
-
 - Demo the functionality of the methods implemented in AnalysisT1 and
     AnalysisT2. 
 - To run this module, in Terminal, select bash and change directory to <name> directory.
@@ -28,22 +27,22 @@ Analysis_t2
 - `avg_time_diff_between_arrests(crime_type)`: Calculates the average time difference in days between arrests for a given crime type, according to the age group of the perpetrator.
 
 ## Testing Overview
-Each method has 1 testing file, named as follows, each with 3 testing function (with the same name):
+- Each method has 1 testing file, named as follows, each with 3 testing function, with the name `testing_file_name_#` where `#` defines the number of the records in the file used for testing
   - `test_most_arrests_day_most_common_race.py` for Analysis_t1
   - `test_highest_felony_offense_in_borough.py` for Analysis_t1
   - `test_crime_most_committed_agegroup.py` for Analysis_t2
   - `test_avg_time_diff_between_arrests.py` for Analysis_t2
+- To run test files, either use the arrow in upper-right corner, or, in the Terminal, run: pytest test_file_name.py
   
 ## Data Documentation
-For detailed information about the dataset, refer to the PROPOSAL.md file.
-For detailed information about how to run the program, refer to HOWTO.md file.
-For install packages required to run this program, install - `requirements.txt`
-For detailed information about the dataset, the questions, solution and testing refer to REPORT.md.
+- For detailed information about the dataset, refer to `PROPOSAL.md` file.
+- For detailed information about how to run the program, refer to `HOWTO.md` file.
+- For installing the packages required to run this program, install - `requirements.txt`
+- For detailed information about the dataset, the questions, solution and testing refer to `REPORT.md`.
 
 ## Design Documents
-Design Document for Analysis_t1 - DESIGN_t1.md
-Design Document for Analysis_t2 - DESIGN_t2.md
-
+- Design Document for Analysis_t1 - DESIGN_t1.md
+- Design Document for Analysis_t2 - DESIGN_t2.md
 
 ## License
 This dataset is licensed under the MIT License.
