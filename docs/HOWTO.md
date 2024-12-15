@@ -1,16 +1,16 @@
-g## Project: New York City's Crime Data in 2024
+## Project: New York City's Crime Data in 2024
 ### Developers: 
 - T1: Olivia LaCroix
 - T2: Swathi Danturi
 
 # How to Use This Project
-
 ## Prerequisites
-- Python 3.x installed
+- `python 3.x` installed
 - `pip` (Python package installer)
 - `pytest` for running tests
-- `rainbow csv` extension in VSCode
-- `black formatter` to format files
+- `rainbow csv` extension in VSCode to analyzie the csv files
+- `black formatter` to format .py files
+- `pylint` to check for syntax errors in the .py files
 
 ## Setup
 1. **Clone the Repository**
@@ -18,7 +18,6 @@ g## Project: New York City's Crime Data in 2024
     git clone <remote-repo-url> "folder_name"
     cd "folder_name"
     ```
-
 2. **Install Dependencies**
     ```sh
     pip install -r "requirements.txt"
@@ -29,7 +28,6 @@ g## Project: New York City's Crime Data in 2024
     ```sh
     python "client.py"
     ```
-
 2. **Run the Core Modules**
     ```sh
     python "analysis_t1.py"
@@ -41,7 +39,6 @@ g## Project: New York City's Crime Data in 2024
     ```sh
     pytest
     ```
-
 2. **Run Specific Test Files**
     ```sh
     pytest "test_most_arrests_day_most_common_race.py"
@@ -55,23 +52,19 @@ g## Project: New York City's Crime Data in 2024
     ```sh
     git checkout -b "feature-branch-name"
     ```
-
 2. **Make Changes and Commit**
     ```sh
     git add .
     git commit -m "Description of changes"
     ```
-
 3. **Push Changes to Remote**
     ```sh
     git push origin "feature-branch-name"
     ```
-
 4. **Create a Pull Request**
     - Go to the repository on GitHub
     - Click on "New Pull Request"
     - Select your branch and submit the pull request
-
 5. **Merge a Pull Request**
     - Go to the repository on GitHub
     - Click on "Files changed" tab and review the changes

@@ -2,11 +2,19 @@
 ### File: requirements.txt
 ### Date: 11/29/2024
 ### Developers: 
-- T1: Olivia LaCroix
-- T2: Swathi Danturi
+-T1: Olivia LaCroix
+-T2: Swathi Danturi
 
-# Required packages
-pip
-pytest
-rainbow-csv
-csv package
+## Software requirements
+-python : Version 3.8 or higher
+-IDE : Visual Studio Code or any other Python compatible IDE
+-VersionControl: Git (optional, for version control)
+-pip: Ensure you have the latest version of pip installed
+-pytest: Version 7.1.2
+-pylint: Version 2.15.0
+-csv: import csv package in the code file to read the csv file
+-rainbow-csv: For better visualization of csv files
+
+## Additional Tools (Optional)
+-Excel: For manual verification of the data
+-Copilot: For better understanding of the code
