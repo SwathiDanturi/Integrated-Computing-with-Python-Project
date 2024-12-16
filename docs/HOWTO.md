@@ -74,7 +74,3 @@
     - Open a python terminal
     - `git checkout main`, main branch
     - `git pull origin main`, merge all the changes 
-
-## Additional Information
-- For detailed project requirements, refer to [README.md](README.md)
-- For design details, refer to [DESIGN.md](DESIGN.md)
